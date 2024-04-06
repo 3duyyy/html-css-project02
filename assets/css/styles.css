@@ -223,8 +223,9 @@ a {
 }
 
 .hero .cta-group .cta-btn {
-  max-width: 180px;
-  line-height: 44px; /*vừa căn giữa vừa tăng khoảng cách trên dưới lên thành 64px*/
+  min-width: 180px;
+  line-height: 64px;
+  text-align: center;
   border-radius: 32px;
   background: var(--primary-color);
 }
@@ -462,10 +463,10 @@ a {
   margin-left: 30px;
 }
 
-/* =================Features================= */
+/* =================Features 1================= */
 .features {
   padding: 65px 0;
-  margin-top: 135px;
+  margin: 135px;
 }
 
 .features .body {
@@ -475,5 +476,287 @@ a {
 }
 
 .features .images {
-  
+  display: flex;
+  gap: 0 30px;
+}
+
+.features .images .img {
+  width: 270px;
+  height: 405px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.features .images .img-left {
+  margin-top: 34px;
+}
+
+.features .sub-content {
+  width: 41%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.features .sub-content .heading {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: -0.76px;
+}
+
+.features .sub-content .desc {
+  margin-top: 18px;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.features .sub-content .feat-btn {
+  margin-top: 32px;
+  min-width: 137px;
+  background: var(--primary-color);
+  border: none;
+}
+
+/* ================Features 2=============== */
+.features-2 .features-left {
+  width: 49%;
+}
+
+.features-2 .title {
+  color: #171100;
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: -0.76px;
+}
+
+.features-2 .desc {
+  margin-top: 16px;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.features-2 .feat-2-btn {
+  margin-top: 32px;
+  min-width: 137px;
+  flex-shrink: 0;
+  border: none;
+  background: var(--primary-color);
+}
+
+.features-2 .images {
+  width: 470px;
+  height: 440px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 20px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+/* =================Blog================== */
+.blog {
+  padding: 96px 0;
+  background: #fffcf4;
+}
+
+.blog .head {
+  text-align: center;
+}
+
+.blog .head .title {
+  color: #130606;
+  font-family: var(--font-heading);
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: -0.76px;
+}
+
+.blog .head .desc {
+  width: 448px; /*Khi đặt width thẻ p đó bị giới hạn nhỏ lại nên text-align: center sẽ căn giữa ở đoạn nhỏ đó và bị lệch đi*/
+  margin: 16px auto;
+  color: #696262;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.blog .blog-item {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+  flex-shrink: 0;
+}
+
+.blog .item {
+  width: calc(33.33% - 20px);
+  background: #fff;
+  border-radius: 16px;
+}
+
+.blog .item:hover {
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blog .item .thumb {
+  width: 370px;
+  height: 250px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 16px 16px 0px 0px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.blog .item .info {
+  padding: 20px 20px 28px 20px;
+}
+
+.blog .item .date {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #5f5b53;
+  padding-bottom: 12px;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+}
+
+.blog .item .date::before {
+  display: inline-block;
+  content: "";
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--primary-color);
+}
+
+.blog .item .date::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: inline-block;
+  content: "";
+  width: 160px;
+  height: 1px;
+  flex-shrink: 0;
+  border-radius: 0.5px;
+  background: #e2dfda;
+}
+
+.blog .item .read {
+  margin-top: 13px;
+  color: #171100;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.blog .blog-btn {
+  margin-top: 12px;
+  text-align: center;
+  border: none;
+  flex-shrink: 0;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.blog .blog-btn:hover {
+  background: var(--primary-color);
+}
+
+.blog .dots {
+  display: flex;
+  margin: 38px auto 0 auto;
+  cursor: pointer;
+}
+
+/* =================Footer=============== */
+.footer {
+  padding: 96px 135px 0;
+  background: #2e2100;
+}
+
+.footer .row {
+  display: flex;
+  padding-bottom: 38px;
+  border-bottom: 1px solid #59554b;
+}
+
+.footer .row .column {
+  width: 21.6%; /*65%/3*/
+}
+
+.footer .row .column:first-child {
+  width: 35%;
+}
+
+.footer .desc {
+  margin-top: 18px;
+  max-width: 264px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+  --line-clamp: 3;
+}
+
+.footer .social {
+  margin-top: 18px;
+}
+
+.footer .title {
+  display: inline-block;
+  color: #fff;
+  padding: 0 48px 14px 0; /*padding-right để tăng width để tăng width border-bottom lên*/
+  border-bottom: 1px solid #59554b;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+.footer a.item {
+  display: block;
+  margin-top: 12px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
+}
+
+.footer .column .item:first-of-type {
+  margin-top: 28px;
+}
+
+.footer .column:nth-of-type(4) {
+  max-width: 231px;
+}
+
+.footer .item strong {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86;
+}
+
+.footer .copyright {
+  padding: 28px 0;
+  color: #807d74;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86;
 }
